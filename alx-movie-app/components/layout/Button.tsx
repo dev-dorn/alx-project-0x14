@@ -1,7 +1,7 @@
 import { memo, type FC } from 'react';
 
 interface ButtonProps {
-  
+  title : string;
 }
 
 const Button: FC<ButtonProps> = (props) => {

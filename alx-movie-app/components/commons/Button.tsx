@@ -1,14 +1,13 @@
 import { memo, type FC } from 'react';
+import { ButtonProps } from '@/interfaces';
 
-interface ButtonProps {
-  
-}
 
-const Button: FC<ButtonProps> = (props) => {
+const Button: React.FC<ButtonProps> = ({title, action}) => {
   return (
-    <div>
-      <h2>Button</h2>
-    </div>
+   <button onClick={action} 
+   className='px-8 py-2 border-2 border-[#E2D609] rounded-full hover:bg-[#E2D609] hover:text-black transition-colors duration-300'>
+    {title}
+   </button>
   );
 };
 
