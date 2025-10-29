@@ -1,14 +1,14 @@
-import { memo, type FC } from 'react';
-
-interface LayoutsProps {
-  
-}
-
-const Layouts: FC<LayoutsProps> = (props) => {
+import { memo, type FC, type ReactNode } from 'react';
+import Footer from './Footer';
+import Header from './Header';
+import { ComponentProps } from '@/interfaces';
+const Layouts: FC<ComponentProps> = ({ children }) => {
   return (
-    <div>
-      <h2>Layouts</h2>
-    </div>
+    <>
+      <Header />
+      <main className="min-h-screen">{children}</main>
+      <Footer />
+    </>
   );
 };
 

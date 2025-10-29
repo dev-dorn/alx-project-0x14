@@ -2,7 +2,7 @@ import { memo, type FC } from 'react';
 import { useRouter } from 'next/router';
 import Button from '@/components/commons/Button';
 
-const router = useRouter();
+
 
 
 interface HomeProps {
@@ -10,6 +10,7 @@ interface HomeProps {
 }
 
 const Home: FC<HomeProps> = (props) => {
+  const router = useRouter();
   return (
     <div className= "bg-[#171D22] text-white">
       <section 
